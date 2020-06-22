@@ -12,8 +12,8 @@ shippedBinary:
 	cd shippedBinarys; $(MAKE) shippedBinary
 
 fetchDep:
-	-go get  github.com/2dust/AndroidLibV2rayLite
-	go get github.com/2dust/AndroidLibV2rayLite
+	-go get  github.com/doctormacky/AndroidLibV2rayLite
+	go get github.com/doctormacky/AndroidLibV2rayLite
 
 ANDROID_HOME=$(HOME)/android-sdk-linux
 export ANDROID_HOME
@@ -22,10 +22,10 @@ export PATH
 downloadGoMobile:
 	go get golang.org/x/mobile/cmd/...
 	sudo apt-get install -qq libstdc++6:i386 lib32z1 expect
-	cd ~ ;curl -L https://raw.githubusercontent.com/2dust/AndroidLibV2rayLite/master/ubuntu-cli-install-android-sdk.sh | sudo bash - > /dev/null
+	cd ~ ;curl -L https://raw.githubusercontent.com/doctormacky/AndroidLibV2rayLite/master/ubuntu-cli-install-android-sdk.sh | sudo bash - > /dev/null
 	ls ~
 	ls ~/android-sdk-linux/
-	gomobile init ;gomobile bind -v  -tags json github.com/2dust/AndroidLibV2rayLite
+	gomobile init ;gomobile bind -v  -tags json github.com/doctormacky/AndroidLibV2rayLite
 
 BuildMobile:
 	@echo Stub
